@@ -1,12 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-        </div><!-- end .row -->
-    </div>
-
-<footer id="footer" role="contentinfo">
-    &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.
-</footer><!-- end #footer -->
+</div><!-- end .row -->
+</div>
 
 <footer class="site-footer">
     <div class="container">
@@ -29,8 +24,10 @@
                         <li><a href="/about/privacy" target="_blank">隐私条例</a></p></li>
                     </ul> <!-- /.footer-menu -->
                 </nav> <!-- /.footer-nav -->
-                <p class="copyright-text"> 2016 Computer @nd Comity | CUHK(SZ)</br> 扫描二维码，了解更多！ </br>
-                    <img src="/assets/images/includes/homepagepic/scan.png" alt="QR code"></p>
+                <p class="copyright-text"> &copy; <?php echo date('Y'); ?> <a
+                        href="<?php $this->options->siteUrl(); ?>"> Computer @nd Comity | CUHK(SZ)</br>
+                        扫描二维码，了解更多！ </br>
+                        <img src="/assets/images/includes/homepagepic/scan.png" alt="QR code"></p>
             </div> <!-- /.col-md- -->
         </div> <!-- /.column -->
     </div> <!-- /.container -->

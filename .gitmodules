@@ -1,3 +1,6 @@
 [submodule "template"]
 	path = template
 	url = https://github.com/computercomity/WebsiteCAC
+[submodule "usr/plugins/AppStore"]
+	path = usr/plugins/AppStore
+	url = https://github.com/chekun/AppStore

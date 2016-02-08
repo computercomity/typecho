@@ -153,7 +153,7 @@ img::-moz-selection {
     text-align: center;
 }
 
-.main-nav ul, .main_menu, .main_menu li ul, #filters, .pages, .project-single .meta-post, .archive-wrapper .archive-list, .categories ul, .thumbs, .footer-menu {
+.main-nav ul, .main_menu, .main_menu li ul, #filters, .page-navigator, .project-single .meta-post, .archive-wrapper .archive-list, .categories ul, .thumbs, .footer-menu {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -640,22 +640,22 @@ blockquote {
     color: #00a8d6;
 }
 
-.pages {
+.page-navigator {
     margin: 20px 0 100px 0;
 }
 
-.pages li {
+.page-navigator li {
     display: inline;
     margin-right: 10px;
 }
 
-.pages li a {
+.page-navigator li a {
     padding: 10px 12px;
     background-color: #f1f4f5;
     color: #31373a;
 }
 
-.pages li a.active {
+.page-navigator li.current {
     color: #00a8d6;
 }
 
@@ -811,7 +811,7 @@ blockquote {
     top: 50%;
     right: 0;
     width: 40px;
-    height: 48;
+    height: 48px;
     content: 'ddd';
     margin-right: 2px;
     margin-top: -25px;

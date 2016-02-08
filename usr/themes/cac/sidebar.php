@@ -1,5 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<div class="col-mb-12 col-offset-1 col-3 kit-hidden-tb" id="secondary" role="complementary">
+<div class="col-md-4" id="secondary" role="complementary">
+    <div class="sidebar">
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
     <section class="widget">
 		<h3 class="widget-title"><?php _e('最新文章'); ?></h3>
@@ -33,8 +34,7 @@
     <section class="widget">
 		<h3 class="widget-title"><?php _e('归档'); ?></h3>
         <ul class="widget-list">
-            <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
-            ->parse('<li><a href="{permalink}">{date}</a></li>'); ?>
+            <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')->parse('<li><a href="{permalink}">{date}</a></li>'); ?>
         </ul>
 	</section>
     <?php endif; ?>
@@ -55,5 +55,4 @@
         </ul>
 	</section>
     <?php endif; ?>
-
-</div><!-- end #sidebar -->
+</div></div><!-- end #sidebar -->
