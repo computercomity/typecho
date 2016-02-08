@@ -52,7 +52,6 @@ class IXR_Server
      * @access public
      * @param mixed $callbacks 回调函数
      * @param mixed $data 输入参数
-     * @return void
      */
     public function __construct($callbacks = false, $data = false)
     {
@@ -123,8 +122,7 @@ class IXR_Server
      *
      * @access private
      * @param integer $error 错误代码
-     * @param string $message 错误消息
-     * @return void
+     * @param bool|string $message 错误消息
      */
     private function error($error, $message = false)
     {

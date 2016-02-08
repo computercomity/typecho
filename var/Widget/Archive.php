@@ -336,7 +336,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_archiveType the $_archiveType to set
+     * @param $archiveType
+     * @internal param the $_archiveType $_archiveType to set
      */
     public function setArchiveType($archiveType)
     {
@@ -344,7 +345,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_archiveTitle the $_archiveTitle to set
+     * @param $archiveTitle
+     * @internal param the $_archiveTitle $_archiveTitle to set
      */
     public function setArchiveTitle($archiveTitle)
     {
@@ -364,7 +366,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_feedType the $_feedType to set
+     * @param $feedType
+     * @internal param the $_feedType $_feedType to set
      */
     public function setFeedType($feedType)
     {
@@ -372,7 +375,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_description the $_description to set
+     * @param $description
+     * @internal param the $_description $_description to set
      */
     public function setDescription($description)
     {
@@ -380,7 +384,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_keywords the $_keywords to set
+     * @param $keywords
+     * @internal param the $_keywords $_keywords to set
      */
     public function setKeywords($keywords)
     {
@@ -388,7 +393,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_feedAtomUrl the $_feedAtomUrl to set
+     * @param $feedAtomUrl
+     * @internal param the $_feedAtomUrl $_feedAtomUrl to set
      */
     public function setFeedAtomUrl($feedAtomUrl)
     {
@@ -396,7 +402,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_feedRssUrl the $_feedRssUrl to set
+     * @param $feedRssUrl
+     * @internal param the $_feedRssUrl $_feedRssUrl to set
      */
     public function setFeedRssUrl($feedRssUrl)
     {
@@ -404,7 +411,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_feedUrl the $_feedUrl to set
+     * @param $feedUrl
+     * @internal param the $_feedUrl $_feedUrl to set
      */
     public function setFeedUrl($feedUrl)
     {
@@ -412,7 +420,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_feed the $_feed to set
+     * @param $feed
+     * @internal param the $_feed $_feed to set
      */
     public function setFeed($feed)
     {
@@ -420,7 +429,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_countSql the $_countSql to set
+     * @param $countSql
+     * @internal param the $_countSql $_countSql to set
      */
     public function setCountSql($countSql)
     {
@@ -428,7 +438,8 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_total the $_total to set
+     * @param $total
+     * @internal param the $_total $_total to set
      */
     public function setTotal($total)
     {
@@ -436,15 +447,17 @@ class Widget_Archive extends Widget_Abstract_Contents
     }
 
     /**
-     * @param $_themeFile the $_themeFile to set
+     * @param $themeFile
+     * @internal param the $_themeFile $_themeFile to set
      */
     public function setThemeFile($themeFile)
     {
         $this->_themeFile = $themeFile;
     }
-    
+
     /**
-     * @param $_themeDir the $_themeDir to set
+     * @param $themeDir
+     * @internal param the $_themeDir $_themeDir to set
      */
     public function setThemeDir($themeDir)
     {
@@ -1901,6 +1914,8 @@ class Widget_Archive extends Widget_Abstract_Contents
      * 输出关键字
      *
      * @access public
+     * @param string $split
+     * @param string $default
      */
     public function keywords($split = ',', $default = '')
     {

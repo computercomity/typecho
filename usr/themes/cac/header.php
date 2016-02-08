@@ -36,109 +36,118 @@
 </div>
 <![endif]-->
 
+<!------------------------------------响应式菜单-------------------------------------------------------------------->
 <div class="responsive_menu">
     <ul class="main_menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="#">About us</a>
+        <li><a href="/">首页</a></li>
+        <li><a href="#">关于我们</a>
             <ul>
-                <li><a href="/about/">About C@C</a></li>
-                <li><a href="/about/history">History of C@C</a></li>
-                <li><a href="/about/team">Our Team</a></li>
-                <li><a href="/about/contact">Contact Us</a></li>
+                <li><a href="/about-us">关于我们</a></li>
+                <li><a href="/about-history">协会记事</a></li>
+                <li><a href="/about-team">我们的团队</a></li>
             </ul>
         </li>
-        <li><a href="#">Events</a>
+        <li><a href="#">活动专区</a>
             <ul>
-                <li><a href="/events/upcoming">Upcoming Events</a></li>
-                <li><a href="/events/review">Review</a></li>
-                <li><a href="/events/annoucement">Announcement</a></li>
+                <li><a href="/upcomingevents">活动预告</a></li>
+                <li><a href="/review">活动回顾</a></li>
+                <li><a href="/annoucement">公告栏</a></li>
             </ul>
         </li>
-        <li><a href="#">Contests</a>
+        <li><a href="#">赛事专区</a>
             <ul>
-                <li><a href="/contest/oj">Online Judge</a></li>
-                <li><a href="/contest/competitionevent">Events & Information</a></li>
+                <li><a href="#">Online Judge (尚未开放)</a></li>
+                <li><a href="/competition-information">赛事信息 (尚未开放)</a></li>
             </ul>
         </li>
-        <li><a href="#">Membership</a>
+        <li><a href="#">会员专区</a>
             <ul>
-                <li><a href="/member/resources">Resources</a></li>
-                <li><a href="/member/mirrorsite">Mirror Site</a></li>
-                <li><a href="/member/recommendation">Recommendation</a></li>
-                <li><a href="/member/forum">Forum</a></li>
+                <li><a href="/members/resource">资源区 (尚未开放)</a></li>
+                <li><a href="/members/mirrorsite">镜像站 (尚未开放)</a></li>
+                <li><a href="/members/recommendation">推荐专区 (尚未开放)</a></li>
             </ul>
         </li>
-        <!--  Forum:if possible
-        <li><a href="archives.html">Forum</a></li>
-        -->
-        <li><a href="#">Join Us</a>
+        <li><a href="#">加入我们</a>
             <ul>
-                <li><a href="/member/login">Log In</a></li>
-                <li><a href="/member/signup">Sign Up</a></li>
-                <li><a href="/member/jointeam">Join The Team</a></li>
+                <li><a href="/members/login">会员登录</a></li>
+                <li><a href="/members/register">注册为会员</a></li>
+                <li><a href="/members/application">加入团队</a></li>
+                <li><a href="/contact/">联系我们</a></li>
             </ul>
         </li>
-        <li><a href="/utils/switchlang?lang=cn">中文</a>
+        <li><a href="/en">English</a>
     </ul> <!-- /.main_menu -->
 </div> <!-- /.responsive_menu -->
-<header class="site-header clearfix" id="header">
+<!------------------------------------菜单栏------------------------------------------------------------------------>
+<header class="site-header clearfix">
     <div class="container">
+
         <div class="row">
+
             <div class="col-md-12">
-                <div class="pull-left logo"><a href="/"> <img src="/assets/images/logo-head.png"
-                                                              alt="Computer And Comity logo"> </a>
+
+                <div class="pull-left logo">
+                    <a href="/">
+                        <img src="<?php $this->options->themeUrl('images/logo-head.png'); ?>"
+                             alt="Computer And Comity logo">
+                    </a>
                 </div>    <!-- /.logo -->
+
                 <div class="main-navigation pull-right">
+
                     <nav class="main-nav visible-md visible-lg">
                         <ul class="sf-menu">
-                            <li class="active"><a href="/">Home</a></li>
-                            <li><a href="#">About us</a>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="#">关于我们</a>
                                 <ul>
-                                    <li><a href="/about/">About C@C</a></li>
-                                    <li><a href="/about/history">History of C@C</a></li>
-                                    <li><a href="/about/team">Our Team</a></li>
-                                    <li><a href="/about/contact">Contact Us</a></li>
+                                    <li><a href="/about-us">关于我们</a></li>
+                                    <li><a href="/about-history">协会记事</a></li>
+                                    <li><a href="/about-team">我们的团队</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Events</a>
+                            <li><a href="#">活动专区</a>
                                 <ul>
-                                    <li><a href="/events/upcoming">Upcoming Events</a></li>
-                                    <li><a href="/events/review">Review</a></li>
-                                    <li><a href="/events/annoucement">Announcement</a></li>
+                                    <li><a href="/upcomingevents">活动预告</a></li>
+                                    <li><a href="/review">活动回顾</a></li>
+                                    <li><a href="/annoucement">公告栏</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Contests</a>
+                            <li><a href="#">赛事专区 (尚未开放)</a>
                                 <ul>
-                                    <li><a href="/contest/oj">Online Judge</a></li>
-                                    <li><a href="/contest/competitionevent">Events & Information</a></li>
+                                    <li><a href="#">Online Judge (尚未开放)</a></li>
+                                    <li><a href="/competition-information">赛事信息 (尚未开放)</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Membership</a>
-                                <ul>
-                                    <li><a href="/member/resources">Resources</a></li>
-                                    <li><a href="/member/mirrorsite">Mirror Site</a></li>
-                                    <li><a href="/member/recommendation">Recommendation</a></li>
-                                    <li><a href="/member/forum">Forum</a></li>
-                                </ul>
+                            <li><a href="#">会员专区 (尚未开放)</a>
+                                <!--                                <ul>
+                                                                    <li><a href="/members/resource">资源区 (尚未开放)</a></li>
+                                                                    <li><a href="/members/mirrorsite">镜像站 (尚未开放)</a></li>
+                                                                    <li><a href="/members/recommendation">推荐专区 (尚未开放)</a></li>
+                                                                </ul>-->
                             </li>
-                            <li><a href="#">Join Us</a>
-                                <ul>
-                                    <li><a href="/member/login">Log In</a></li>
-                                    <li><a href="/member/signup">Sign Up</a></li>
-                                    <li><a href="/member/jointeam">Join The Team</a></li>
-                                </ul>
+                            <li><a href="#">加入我们 (尚未开放)</a>
+                                <!--                                <ul>-->
+                                <!--                                    <li><a href="/members/login">会员登录 (尚未开放)</a></li>-->
+                                <!--                                    <li><a href="/members/register">注册为会员 (尚未开放)</a></li>-->
+                                <!--                                    <li><a href="/members/application">加入团队 (尚未开放)</a></li>-->
+                                <!--                                </ul>-->
                             </li>
-                            <li><a href="/utils/switchlang?lang=cn">中文</a>
+                            <li><a href="/contact/">联系我们 (尚未开放)</a></li>
+                            <li><a href="/en">English</a>
                         </ul> <!-- /.sf-menu -->
                     </nav> <!-- /.main-nav -->
 
-                    <div class="responsive-navigation visible-sm visible-xs"><a href="#nogo" class="menu-toggle-btn"><i
-                                class="fa fa-bars"></i></a></div> <!-- /responsive_navigation -->
+                    <!-- This one in here is responsive menu for tablet and mobiles -->
+                    <div class="responsive-navigation visible-sm visible-xs">
+                        <a href="#nogo" class="menu-toggle-btn">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div> <!-- /responsive_navigation -->
                 </div> <!-- /.main-navigation -->
             </div> <!-- /.col-md-12 -->
-        </div>
-    </div>
-</header>
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</header> <!-- /.site-header -->
 <?php if ($this->is('archive') OR
     $this->is('single') OR
     $this->is('page') OR
@@ -160,8 +169,6 @@
                                 'tag' => _t('标签 %s 下的文章'),
                                 'author' => _t('%s 发布的文章')
                             ), 'Home / ', '') ?>
-<!--                            <?php /*if ($this->is('post')): $this->category(); */?> &raquo; <?php /*$this->title() */?>
-                            --><?php /*else:$this->archiveTitle(' &raquo; ', '', '');  endif; */?>
                         </span>
                     </div> <!-- /.col-md-6 -->
                 </div> <!-- /.row -->

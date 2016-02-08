@@ -96,7 +96,7 @@ class Upgrade
      * @access public
      * @param Typecho_Db $db 数据库对象
      * @param Typecho_Widget $options 全局信息组件
-     * @return void
+     * @throws Typecho_Exception
      */
     public static function v0_4r9_1_14($db, $options)
     {
@@ -341,7 +341,7 @@ Typecho_Date::setTimezoneOffset($options->timezone);
      * @access public
      * @param Typecho_Db $db 数据库对象
      * @param Typecho_Widget $options 全局信息组件
-     * @return void
+     * @throws Typecho_Widget_Exception
      */
     public static function v0_6r9_4_21($db, $options)
     {

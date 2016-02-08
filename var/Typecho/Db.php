@@ -179,9 +179,10 @@ class Typecho_Db
 
     /**
      * 选择数据库
-     * 
-     * @param int $op 
+     *
+     * @param int $op
      * @return Typecho_Db_Adapter
+     * @throws Typecho_Db_Exception
      */
     public function selectDb($op)
     {
@@ -217,9 +218,9 @@ class Typecho_Db
      * 为多数据库提供支持
      *
      * @access public
-     * @param Typecho_Db $db 数据库实例
+     * @param $config
      * @param integer $op 数据库操作
-     * @return void
+     * @internal param Typecho_Db $db 数据库实例
      */
     public function addServer($config, $op)
     {
@@ -283,8 +284,8 @@ class Typecho_Db
      * 选择查询字段
      *
      * @access public
-     * @param mixed $field 查询字段
      * @return Typecho_Db_Query
+     * @internal param mixed $field 查询字段
      */
     public function select()
     {
@@ -329,9 +330,10 @@ class Typecho_Db
      * 执行查询语句
      *
      * @param mixed $query 查询语句或者查询对象
-     * @param boolean $op 数据库读写状态
+     * @param bool|int $op 数据库读写状态
      * @param string $action 操作动作
      * @return mixed
+     * @throws Typecho_Db_Exception
      */
     public function query($query, $op = self::READ, $action = self::SELECT)
     {

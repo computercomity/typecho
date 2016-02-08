@@ -26,8 +26,7 @@ function _t($string) {
 /**
  * I18n function, translate and echo
  *
- * @param string $string 需要翻译并输出的文字
- * @return void
+ * @internal param string $string 需要翻译并输出的文字
  */
 function _e() {
     $args = func_get_args();

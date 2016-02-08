@@ -363,7 +363,7 @@ class Widget_Contents_Post_Edit extends Widget_Abstract_Contents implements Widg
      * 执行函数
      *
      * @access public
-     * @return void
+     * @throws Typecho_Widget_Exception
      */
     public function execute()
     {
@@ -444,8 +444,9 @@ class Widget_Contents_Post_Edit extends Widget_Abstract_Contents implements Widg
      * 获取文章权限
      *
      * @access public
-     * @param string $permission 权限
      * @return unknown
+     * @throws Typecho_Widget_Exception
+     * @internal param string $permission 权限
      */
     public function allow()
     {
@@ -583,8 +584,11 @@ class Widget_Contents_Post_Edit extends Widget_Abstract_Contents implements Widg
      * @access public
      * @param integer $cid
      * @param string $tags
-     * @param boolean $count 是否参与计数
+     * @param bool $beforeCount
+     * @param bool $afterCount
      * @return string
+     * @throws Typecho_Widget_Exception
+     * @internal param bool $count 是否参与计数
      */
     public function setTags($cid, $tags, $beforeCount = true, $afterCount = true)
     {
@@ -650,8 +654,10 @@ class Widget_Contents_Post_Edit extends Widget_Abstract_Contents implements Widg
      * @access public
      * @param integer $cid 内容id
      * @param array $categories 分类id的集合数组
-     * @param boolean $count 是否参与计数
-     * @return integer
+     * @param bool $beforeCount
+     * @param bool $afterCount
+     * @return int
+     * @internal param bool $count 是否参与计数
      */
     public function setCategories($cid, array $categories, $beforeCount = true, $afterCount = true)
     {

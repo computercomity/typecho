@@ -491,7 +491,7 @@ jQuery.tableDnD = {
             return "Error: No Table id set, you need to set an id on your table and every row";
         }
     }
-}
+};
 
 jQuery.fn.extend(
 	{

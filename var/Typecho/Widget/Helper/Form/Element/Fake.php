@@ -26,7 +26,6 @@ class Typecho_Widget_Helper_Form_Element_Fake extends Typecho_Widget_Helper_Form
      * @access public
      * @param string $name 表单输入项名称
      * @param mixed $value 表单默认值
-     * @return void
      */
     public function __construct($name, $value)
     {

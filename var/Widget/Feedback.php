@@ -151,7 +151,7 @@ class Widget_Feedback extends Widget_Abstract_Comments implements Widget_Interfa
      * 引用处理函数
      *
      * @access private
-     * @return void
+     * @throws Typecho_Widget_Exception
      */
     private function trackback()
     {

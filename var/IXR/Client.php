@@ -98,10 +98,10 @@ class IXR_Client
      *
      * @access public
      * @param string $server 服务端地址
-     * @param string $path 路径名称
+     * @param bool|string $path 路径名称
      * @param integer $port 端口名称
      * @param string $useragent 客户端
-     * @return void
+     * @param null $prefix
      */
     public function __construct($server, $path = false, $port = 80, $useragent = self::DEFAULT_USERAGENT, $prefix = NULL)
     {
@@ -217,7 +217,10 @@ class IXR_Client
      * by 70
      *
      * @access public
+     * @param $method
+     * @param $args
      * @return mixed
+     * @throws IXR_Exception
      */
     public function __call($method, $args)
     {

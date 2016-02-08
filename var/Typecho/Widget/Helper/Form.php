@@ -47,7 +47,9 @@ class Typecho_Widget_Helper_Form extends Typecho_Widget_Helper_Layout
      * 构造函数,设置基本属性
      *
      * @access public
-     * @return void
+     * @param null $action
+     * @param string $method
+     * @param string $enctype
      */
     public function __construct($action = NULL, $method = self::GET_METHOD, $enctype = self::STANDARD_ENCODE)
     {
@@ -80,7 +82,7 @@ class Typecho_Widget_Helper_Form extends Typecho_Widget_Helper_Layout
      * 增加输入元素
      *
      * @access public
-     * @param Typecho_Widget_Helper_Form_Abstract $input 输入元素
+     * @param Typecho_Widget_Helper_Form_Abstract|Typecho_Widget_Helper_Form_Element $input 输入元素
      * @return Typecho_Widget_Helper_Form
      */
     public function addInput(Typecho_Widget_Helper_Form_Element $input)

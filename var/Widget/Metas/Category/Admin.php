@@ -60,6 +60,7 @@ class Widget_Metas_Category_Admin extends Widget_Metas_Category_List
      *
      * @access public
      * @return string
+     * @throws Typecho_Widget_Exception
      */
     public function getMenuTitle()
     {

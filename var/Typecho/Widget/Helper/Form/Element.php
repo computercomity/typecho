@@ -117,7 +117,6 @@ abstract class Typecho_Widget_Helper_Form_Element extends Typecho_Widget_Helper_
      * @param mixed $value 表单默认值
      * @param string $label 表单标题
      * @param string $description 表单描述
-     * @return void
      */
     public function __construct($name = NULL, array $options = NULL, $value = NULL, $label = NULL, $description = NULL)
     {
@@ -292,10 +291,10 @@ abstract class Typecho_Widget_Helper_Form_Element extends Typecho_Widget_Helper_
      * 初始化当前输入项
      *
      * @access public
-     * @param Typecho_Widget_Helper_Layout $container 容器对象
      * @param string $name 表单元素名称
      * @param array $options 选择项
      * @return Typecho_Widget_Helper_Form_Element
+     * @internal param Typecho_Widget_Helper_Layout $container 容器对象
      */
     abstract public function input($name = NULL, array $options = NULL);
 
@@ -312,6 +311,7 @@ abstract class Typecho_Widget_Helper_Form_Element extends Typecho_Widget_Helper_
      * 增加验证器
      *
      * @access public
+     * @param $name
      * @return Typecho_Widget_Helper_Form_Element
      */
     public function addRule($name)

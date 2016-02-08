@@ -316,8 +316,9 @@ class Typecho_I18n_GetText
      * Detects which plural form to take
      *
      * @access private
-     * @param n count
+     * @param count $n
      * @return int array index of the right plural form
+     * @internal param count $n
      */
     private function select_string($n)
     {

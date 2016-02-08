@@ -28,12 +28,12 @@ class Widget_Contents_Page_Edit extends Widget_Contents_Post_Edit implements Wid
      * @access protected
      */
     protected $themeCustomFieldsHook = 'themePageFields';
-    
+
     /**
      * 执行函数
      *
      * @access public
-     * @return void
+     * @throws Typecho_Widget_Exception
      */
     public function execute()
     {

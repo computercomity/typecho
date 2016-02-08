@@ -363,8 +363,8 @@ else
             // "paragraphs" that are wrapped in non-block-level tags, such as anchors,
             // phrase emphasis, and spans. The list of tags we're looking for is
             // hard-coded:
-            var block_tags_a = "p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del"
-            var block_tags_b = "p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math"
+            var block_tags_a = "p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del";
+            var block_tags_b = "p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math";
 
             // First, look for nested blocks, e.g.:
             //   <div>
@@ -485,8 +485,10 @@ else
         function hashMatch(wholeMatch, m1) {
             return hashBlock(m1);
         }
-        
-        var blockGamutHookCallback = function (t) { return _RunBlockGamut(t); }
+
+        var blockGamutHookCallback = function (t) {
+            return _RunBlockGamut(t);
+        };
 
         function _RunBlockGamut(text, doNotUnhash) {
             //
@@ -920,7 +922,7 @@ else
                     var list_type = (m2.search(/[*+-]/g) > -1) ? "ul" : "ol";
                     var first_number;
                     if (list_type === "ol")
-                        first_number = parseInt(m2, 10)
+                        first_number = parseInt(m2, 10);
 
                     var result = _ProcessListItems(list, list_type, isInsideParagraphlessListItem);
 
@@ -945,7 +947,7 @@ else
 
                     var first_number;
                     if (list_type === "ol")
-                        first_number = parseInt(m3, 10)
+                        first_number = parseInt(m3, 10);
 
                     var result = _ProcessListItems(list, list_type);
                     var opening = "<" + list_type;
@@ -1398,7 +1400,7 @@ else
                 else if (/\S/.test(str)) {
                     str = _RunSpanGamut(str);
                     str = str.replace(/^([ \t]*)/g, "<p>");
-                    str += "</p>"
+                    str += "</p>";
                     grafsOut.push(str);
                 }
 
@@ -1566,7 +1568,7 @@ else
             text = text.replace(/^(\t|[ ]{1,4})/gm, "~0"); // attacklab: g_tab_width
 
             // attacklab: clean up hack
-            text = text.replace(/~0/g, "")
+            text = text.replace(/~0/g, "");
 
             return text;
         }
@@ -1596,7 +1598,7 @@ else
 
         function attributeSafeUrl(url) {
             url = attributeEncode(url);
-            url = escapeCharacters(url, "*_:()[]")
+            url = escapeCharacters(url, "*_:()[]");
             return url;
         }
 
@@ -1744,7 +1746,7 @@ else
             }
 
             return string;
-        }
+        };
 
         idPostfix = idPostfix || "";
 
@@ -1766,7 +1768,9 @@ else
         hooks.addNoop("enterFakeFullScreen");
         hooks.addNoop("exitFullScreen");
 
-        this.getConverter = function () { return markdownConverter; }
+        this.getConverter = function () {
+            return markdownConverter;
+        };
 
         var that = this,
             panels;
@@ -1802,7 +1806,7 @@ else
             forceRefresh();
         };
 
-    }
+    };
 
     // before: contains all the text in the input box BEFORE the selection.
     // after: contains all the text in the input box AFTER the selection.
@@ -1863,7 +1867,10 @@ else
         if (remove) {
             beforeReplacer = afterReplacer = "";
         } else {
-            beforeReplacer = function (s) { that.before += s; return ""; }
+            beforeReplacer = function (s) {
+                that.before += s;
+                return "";
+            };
             afterReplacer = function (s) { that.after = s + that.after; return ""; }
         }
 
@@ -2038,7 +2045,7 @@ else
         pattern = pre + pattern + post;
 
         return new re(pattern, flags);
-    }
+    };
 
     // UNFINISHED
     // The assignment in the while loop makes jslint cranky.
@@ -2356,7 +2363,7 @@ else
                 this.text = inputArea.value;
             }
 
-        }
+        };
 
         // Sets the selected text in the input box after we've performed an
         // operation.
@@ -2608,11 +2615,11 @@ else
                 parent.appendChild(preview);
             else
                 parent.insertBefore(preview, sibling);
-        }
+        };
 
         var nonSuckyBrowserPreviewSet = function (text) {
             panels.preview.innerHTML = text;
-        }
+        };
 
         var previewSetter;
 
@@ -2833,7 +2840,7 @@ else
         setTimeout(function () {
             createDialog();
         }, 0);
-    }
+    };
 
     // This simulates a modal dialog box and asks for the URL when you
     // click the hyperlink or image buttons.
@@ -3276,7 +3283,7 @@ else
                 spacer.id = "wmd-spacer" + num + postfix;
                 buttonRow.appendChild(spacer);
                 xPosition += 25;
-            }
+            };
 
             buttons.bold = makeButton("wmd-bold-button", getString("bold"), "0px", bindCommand("doBold"));
             buttons.italic = makeButton("wmd-italic-button", getString("italic"), "-20px", bindCommand("doItalic"));
@@ -3547,7 +3554,7 @@ else
                         break;
                 }
                 return encodeURI(match);
-            })
+            });
             
             if (title) {
                 title = title.trim ? title.trim() : title.replace(/^\s*/, "").replace(/\s*$/, "");
@@ -4064,18 +4071,18 @@ else
         chunk.startTag = "----------\n";
         chunk.selection = "";
         chunk.skipLines(2, 1, true);
-    }
+    };
 
     commandProto.doMore = function (chunk, postProcessing) {
         chunk.startTag = "<!--more-->\n\n";
         chunk.selection = "";
         chunk.skipLines(2, 0, true);
-    }
+    };
 
     commandProto.doTab = function (chunk, postProcessing) {
         chunk.startTag = "    ";
         chunk.selection = "";
-    }
+    };
 
     function FullScreenManager (hooks, getString) {
         this.fullScreenBind = false;

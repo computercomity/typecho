@@ -81,7 +81,6 @@ class Typecho_Widget_Helper_Layout
      * @access public
      * @param string $tagName 标签名称
      * @param array $attributes 属性列表
-     * @return void
      */
     public function __construct($tagName = 'div', array $attributes = NULL)
     {
@@ -308,9 +307,10 @@ class Typecho_Widget_Helper_Layout
      * 设置属性
      *
      * @access public
-     * @param string $attributeName 属性名称
-     * @param string $attributeValue 属性值
-     * @return void
+     * @param $name
+     * @param $value
+     * @internal param string $attributeName 属性名称
+     * @internal param string $attributeValue 属性值
      */
     public function __set($name, $value)
     {
@@ -321,8 +321,8 @@ class Typecho_Widget_Helper_Layout
      * 获取属性
      *
      * @access public
-     * @param string $attributeName 属性名称
-     * @return void
+     * @param $name
+     * @internal param string $attributeName 属性名称
      */
     public function __get($name)
     {

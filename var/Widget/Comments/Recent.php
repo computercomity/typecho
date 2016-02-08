@@ -25,7 +25,6 @@ class Widget_Comments_Recent extends Widget_Abstract_Comments
      * @param mixed $request request对象
      * @param mixed $response response对象
      * @param mixed $params 参数列表
-     * @return void
      */
     public function __construct($request, $response, $params = NULL)
     {

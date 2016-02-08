@@ -73,7 +73,6 @@ class Typecho_Db_Query
      *
      * @param Typecho_Db_Adapter $adapter 数据库适配器
      * @param string $prefix 前缀
-     * @return void
      */
     public function __construct(Typecho_Db_Adapter $adapter, $prefix)
     {
@@ -252,10 +251,9 @@ class Typecho_Db_Query
 
     /**
      * AND条件查询语句
-     *
-     * @param string $condition 查询条件
-     * @param mixed $param 条件值
      * @return Typecho_Db_Query
+     * @internal param string $condition 查询条件
+     * @internal param mixed $param 条件值
      */
     public function where()
     {
@@ -276,10 +274,9 @@ class Typecho_Db_Query
 
     /**
      * OR条件查询语句
-     *
-     * @param string $condition 查询条件
-     * @param mixed $param 条件值
      * @return Typecho_Db_Query
+     * @internal param string $condition 查询条件
+     * @internal param mixed $param 条件值
      */
     public function orWhere()
     {

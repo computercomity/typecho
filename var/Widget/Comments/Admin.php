@@ -62,6 +62,7 @@ class Widget_Comments_Admin extends Widget_Abstract_Comments
      *
      * @access public
      * @return string
+     * @throws Typecho_Widget_Exception
      */
     public function getMenuTitle()
     {

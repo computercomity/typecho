@@ -53,8 +53,8 @@ class Typecho_Widget_Helper_PageNavigator_Classic extends Typecho_Widget_Helper_
      * 输出下一页
      *
      * @access public
-     * @param string $prevWord 下一页文字
-     * @return void
+     * @param string $nextWord
+     * @internal param string $prevWord 下一页文字
      */
     public function next($nextWord = 'NEXT')
     {

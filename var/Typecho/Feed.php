@@ -115,7 +115,10 @@ class Typecho_Feed
      * 创建Feed对象
      *
      * @access public
-     * @return void
+     * @param $version
+     * @param string $type
+     * @param string $charset
+     * @param string $lang
      */
     public function __construct($version, $type = self::RSS2, $charset = 'UTF-8', $lang = 'en')
     {

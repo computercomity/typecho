@@ -75,10 +75,11 @@ abstract class Typecho_Widget_Helper_PageNavigator
      *
      * @access public
      * @param integer $total 记录总数
-     * @param integer $page 当前页面
+     * @param $currentPage
      * @param integer $pageSize 每页记录数
      * @param string $pageTemplate 页面链接模板
-     * @return void
+     * @throws Typecho_Widget_Exception
+     * @internal param int $page 当前页面
      */
     public function __construct($total, $currentPage, $pageSize, $pageTemplate)
     {
@@ -122,7 +123,7 @@ abstract class Typecho_Widget_Helper_PageNavigator
      * 输出方法
      *
      * @access public
-     * @return void
+     * @throws Typecho_Widget_Exception
      */
     public function render()
     {

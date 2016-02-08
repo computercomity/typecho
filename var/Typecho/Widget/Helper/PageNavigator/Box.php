@@ -27,8 +27,8 @@ class Typecho_Widget_Helper_PageNavigator_Box extends Typecho_Widget_Helper_Page
      * @param string $nextWord 下一页文字
      * @param int $splitPage 分割范围
      * @param string $splitWord 分割字符
-     * @param string $currentClass 当前激活元素class
-     * @return void
+     * @param array $template
+     * @internal param string $currentClass 当前激活元素class
      */
     public function render($prevWord = 'PREV', $nextWord = 'NEXT', $splitPage = 3, $splitWord = '...', array $template = array())
     { 

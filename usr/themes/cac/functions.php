@@ -2,9 +2,10 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form) {
-    $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点LOGO地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));
-    $form->addInput($logoUrl);
-    
+
+    $cooperators = new Typecho_Widget_Helper_Form_Element_Textarea('cooperators', NULL, NULL, '合作伙伴', "需要使用 JSON 格式输入, 只限 3 个");
+    $form->addInput($cooperators);
+
     $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', 
     array('ShowRecentPosts' => _t('显示最新文章'),
     'ShowRecentComments' => _t('显示最近回复'),

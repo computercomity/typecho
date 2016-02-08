@@ -39,7 +39,7 @@ class Widget_Contents_Attachment_Edit extends Widget_Contents_Post_Edit implemen
      * 执行函数
      *
      * @access public
-     * @return void
+     * @throws Typecho_Widget_Exception
      */
     public function execute()
     {

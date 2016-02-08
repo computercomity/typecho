@@ -82,7 +82,7 @@ class Widget_Menu extends Typecho_Widget
      * @param mixed $request request对象
      * @param mixed $response response对象
      * @param mixed $params 参数列表
-     * @return void
+     * @throws Typecho_Widget_Exception
      */
     public function __construct($request, $response, $params = NULL)
     {
@@ -296,6 +296,8 @@ class Widget_Menu extends Typecho_Widget
      * 输出父级菜单
      *
      * @access public
+     * @param string $class
+     * @param string $childClass
      * @return string
      */
     public function output($class = 'focus', $childClass = 'focus')

@@ -192,8 +192,7 @@ class Widget_XmlRpc extends Widget_Abstract_Contents implements Widget_Interface
      * 如果这里没有重载, 每次都会被默认执行
      *
      * @access public
-     * @param boolen $run 是否执行
-     * @return void
+     * @param bool|boolen $run 是否执行
      */
     public function execute($run = false)
     {
@@ -278,7 +277,11 @@ class Widget_XmlRpc extends Widget_Abstract_Contents implements Widget_Interface
      * 检查权限
      *
      * @access public
-     * @return void
+     * @param $name
+     * @param $password
+     * @param string $level
+     * @return bool
+     * @throws Typecho_Widget_Exception
      */
     public function checkAccess($name, $password, $level = 'contributor')
     {
@@ -679,13 +682,14 @@ class Widget_XmlRpc extends Widget_Abstract_Contents implements Widget_Interface
     }
 
         /**
-     * 获取用户
-     * 
-     * @access public
-     * @param string $userName 用户名
-     * @param string $password 密码
-     * @return array
-     */
+         * 获取用户
+         *
+         * @access public
+         * @param $blogId
+         * @param string $userName 用户名
+         * @param string $password 密码
+         * @return array
+         */
     public function wpGetProfile($blogId, $userName, $password)
     {
 
@@ -1696,9 +1700,10 @@ class Widget_XmlRpc extends Widget_Abstract_Contents implements Widget_Interface
      * @param int $blogId
      * @param string $userName
      * @param string $password
-     * @param int $postNum
-     * @access public
+     * @param $postsNum
      * @return postTitleStructs
+     * @internal param int $postNum
+     * @access public
      */
     public function mtGetRecentPostTitles($blogId, $userName, $password, $postsNum)
     {
@@ -1938,11 +1943,12 @@ class Widget_XmlRpc extends Widget_Abstract_Contents implements Widget_Interface
      * bloggerDeletePost
      * 删除文章
      * @param mixed $blogId
+     * @param $postId
      * @param mixed $userName
      * @param mixed $password
      * @param mixed $publish
-     * @access public
      * @return bool
+     * @access public
      */
     public function bloggerDeletePost($blogId, $postId, $userName, $password, $publish)
     {

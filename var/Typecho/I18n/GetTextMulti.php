@@ -30,7 +30,6 @@ class Typecho_I18n_GetTextMulti
      *
      * @access public
      * @param string $fileName 语言文件名
-     * @return void
      */
     public function __construct($fileName)
     {

@@ -27,7 +27,7 @@ class Widget_Comments_Ping extends Widget_Abstract_Comments
      * @access private
      */
     private $_customSinglePingCallback = false;
-    
+
     /**
      * 构造函数,初始化组件
      *
@@ -35,7 +35,6 @@ class Widget_Comments_Ping extends Widget_Abstract_Comments
      * @param mixed $request request对象
      * @param mixed $response response对象
      * @param mixed $params 参数列表
-     * @return void
      */
     public function __construct($request, $response, $params = NULL)
     {
@@ -90,13 +89,12 @@ class Widget_Comments_Ping extends Widget_Abstract_Comments
 </li>
 <?php
     }
-    
+
     /**
      * 输出文章回响数
      *
      * @access public
-     * @param string $string 评论数格式化数据
-     * @return void
+     * @internal param string $string 评论数格式化数据
      */
     public function num()
     {

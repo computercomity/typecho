@@ -43,7 +43,8 @@ class Widget_Contents_Post_Date extends Typecho_Widget
      * @param mixed $request request对象
      * @param mixed $response response对象
      * @param mixed $params 参数列表
-     * @return void
+     * @throws Typecho_Db_Exception
+     * @throws Typecho_Widget_Exception
      */
     public function __construct($request, $response, $params = NULL)
     {

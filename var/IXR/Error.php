@@ -36,7 +36,6 @@ class IXR_Error
      * @access public
      * @param integer $code 错误代码
      * @param string $message 错误消息
-     * @return void
      */
     public function __construct($code, $message)
     {

@@ -294,8 +294,9 @@ abstract class Typecho_Http_Client_Adapter
      *
      * @access public
      * @param string $url 请求地址
-     * @param string $rfc 请求协议
      * @return string
+     * @throws Typecho_Http_Client_Exception
+     * @internal param string $rfc 请求协议
      */
     public function send($url)
     {

@@ -59,7 +59,6 @@ class Widget_Comments_Archive extends Widget_Abstract_Comments
      * @param mixed $request request对象
      * @param mixed $response response对象
      * @param mixed $params 参数列表
-     * @return void
      */
     public function __construct($request, $response, $params = NULL)
     {
@@ -184,8 +183,7 @@ class Widget_Comments_Archive extends Widget_Abstract_Comments
      * 输出文章评论数
      *
      * @access public
-     * @param string $string 评论数格式化数据
-     * @return void
+     * @internal param string $string 评论数格式化数据
      */
     public function num()
     {
@@ -449,8 +447,7 @@ class Widget_Comments_Archive extends Widget_Abstract_Comments
      * 根据深度余数输出
      *
      * @access public
-     * @param string $param 需要输出的值
-     * @return void
+     * @internal param string $param 需要输出的值
      */
     public function levelsAlt()
     {

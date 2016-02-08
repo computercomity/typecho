@@ -49,8 +49,7 @@ class Widget_Metas_Tag_Cloud extends Widget_Abstract_Metas
      * 按分割数输出字符串
      *
      * @access public
-     * @param string $param 需要输出的值
-     * @return void
+     * @internal param string $param 需要输出的值
      */
     public function split()
     {

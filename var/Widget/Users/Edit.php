@@ -36,7 +36,7 @@ class Widget_Users_Edit extends Widget_Abstract_Users implements Widget_Interfac
      * 执行函数
      *
      * @access public
-     * @return void
+     * @throws Typecho_Widget_Exception
      */
     public function execute()
     {

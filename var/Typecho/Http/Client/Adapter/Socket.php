@@ -37,6 +37,7 @@ class Typecho_Http_Client_Adapter_Socket extends Typecho_Http_Client_Adapter
      * @access public
      * @param string $url 请求地址
      * @return string
+     * @throws Typecho_Http_Client_Exception
      */
     public function httpSend($url)
     {

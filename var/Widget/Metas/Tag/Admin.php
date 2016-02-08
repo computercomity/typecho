@@ -37,6 +37,7 @@ class Widget_Metas_Tag_Admin extends Widget_Metas_Tag_Cloud
      *
      * @access public
      * @return string
+     * @throws Typecho_Widget_Exception
      */
     public function getMenuTitle()
     {

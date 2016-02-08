@@ -335,7 +335,8 @@ class Widget_Users_Profile extends Widget_Users_Edit implements Widget_Interface
      * 更新个人设置
      *
      * @access public
-     * @return void
+     * @throws Typecho_Plugin_Exception
+     * @throws Typecho_Widget_Exception
      */
     public function updatePersonal()
     {
